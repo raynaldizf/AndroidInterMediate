@@ -4,7 +4,7 @@ plugins {
     id 'kotlin-parcelize'
     id 'kotlin-kapt'
     id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
-}
+ }
 
 android {
     namespace 'com.app.storyapp'
@@ -102,15 +102,25 @@ dependencies {
     implementation 'com.google.android.gms:play-services-maps:18.1.0'
 
     // Paging 3 dependencies
-    implementation "androidx.paging:paging-runtime:3.1.1"
-    implementation "androidx.paging:paging-common:3.1.1"
+    implementation 'androidx.paging:paging-runtime:3.1.1'
+    implementation 'androidx.paging:paging-common:3.1.1'
 
 
     // Room
-    implementation "androidx.room:room-runtime:2.5.2"
-    annotationProcessor "androidx.room:room-compiler:2.5.2"
-    androidTestImplementation "androidx.room:room-testing:2.5.2"
-    implementation "androidx.room:room-ktx:2.5.2"
-    kapt "androidx.room:room-compiler:2.5.2"
+    implementation 'androidx.room:room-runtime:2.5.2'
+    annotationProcessor 'androidx.room:room-compiler:2.5.2'
+    androidTestImplementation 'androidx.room:room-testing:2.5.2'
+    implementation 'androidx.room:room-ktx:2.5.2'
+    kapt 'androidx.room:room-compiler:2.5.2'
+
+    // Unit Testing
+    testImplementation 'org.mockito:mockito-core:3.12.4'
+    androidTestImplementation 'org.mockito:mockito-android:3.12.4'
+    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4'
+    androidTestImplementation 'androidx.arch.core:core-testing:2.2.0'
+    testImplementation 'androidx.arch.core:core-testing:2.2.0'
+
+
+
 
 }
