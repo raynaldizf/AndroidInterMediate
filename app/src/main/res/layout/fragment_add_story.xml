@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.addstory.AddStoryFragment">
+
+    <RelativeLayout
+        android:id="@+id/container1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/toolBar"
+            android:backgroundTint="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageButton
+                    android:id="@+id/btnBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_arrow_back_24"
+                    android:backgroundTint="@color/white"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kembali"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:layout_marginStart="10dp"
+                    android:textStyle="bold"
+                    />
+
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <ImageView
+            android:id="@+id/imagesView"
+            android:layout_width="300dp"
+            android:layout_height="250dp"
+            android:src="@drawable/baseline_image_24"
+            android:scaleType="fitXY"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/toolBar"
+            />
+
+        <LinearLayout
+            android:id="@+id/container2"
+            android:layout_below="@id/imagesView"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCamera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Camera"
+                android:backgroundTint="#0095F6"
+                />
+
+            <Space
+                android:layout_width="@dimen/button_gap_size"
+                android:layout_height="0dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnGalery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Galerry"
+                android:backgroundTint="#0095F6"
+                />
+
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etLayout"
+            android:layout_below="@id/container2"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputDeskripsi"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Deskripsi"
+                android:gravity="top"
+                >
+
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+<!--        <CheckBox-->
+<!--            android:id="@+id/bagikanLokasi"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Bagikan Lokasi"-->
+<!--            android:layout_below="@id/etLayout"-->
+<!--            android:layout_marginStart="40dp"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginEnd="40dp"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="16sp"-->
+<!--            />-->
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnUpload"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:text="Upload"
+            android:textColor="@color/white"
+            android:backgroundTint="#0095F6"
+            android:padding="10dp"
+
+
+
+            />
+
+
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
